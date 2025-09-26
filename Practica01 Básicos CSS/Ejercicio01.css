@@ -1,0 +1,75 @@
+p {
+    color: blue;
+}
+
+h1 {
+    font: Arial;
+    font-size: 30px;
+}
+
+body {
+    background-color: yellow;
+}
+
+.cajaVerde {
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+    background-color: green;
+}
+
+.cajaRoja {
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+    background-color: red;
+}
+
+.cajaAzul {
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+    background-color: blue;
+}
+
+.parrafoBorde {
+    border: 2px;
+    border-color: black;
+    border-style: dashed;
+}
+
+.cuadroGris {
+    background-color: gray;
+    padding: 20px;
+    margin: 30px;
+}
+
+.textoCentrado {
+    text-align: center;
+}
+
+.botonAzul {
+    background-color: blue;
+    color: white;   
+}
+
+.botonAzul:hover {
+    color: orange;
+}
+
+.pImportante {
+    color: red;
+    font-weight: bold;
+}
+
+.pNormal {
+    color: red;
+    font-weight: lighter;
+}
+
+.tarjetaPresentacion {
+    background-color: lightblue;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 10px 10px;
+}

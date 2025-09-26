@@ -1,0 +1,70 @@
+body {
+  background-color: aliceblue;
+  font-family: sans-serif;
+}
+
+.tarjeta {
+  max-width: 380px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border: 2px;
+  border-style: dotted;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: serif;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+  text-indent: 30px;
+}
+
+span {
+  color: white;
+  background-color: lightcoral;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+li {
+  margin: 10px;
+  padding: 20px;
+  background-color: lightsalmon;
+  border: 2px;
+}
+
+.tarjeta:hover {
+  background-color: gainsboro;
+  border-color: aqua;
+  transform: scale(1.05);
+}
+
+li:hover {
+  background-color: lightyellow;
+  transform: translateY(-5px) scale(1.03);
+}
+
+span:hover,
+h1:hover {
+  font-weight: bold;
+}
+
+.tarjeta,
+li,
+span,
+h1 {
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+    transform 0.3s;
+}

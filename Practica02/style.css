@@ -1,0 +1,40 @@
+body {
+    background-color: gray;
+}
+
+.tarjeta {
+    background-color: lightgoldenrodyellow;
+    border: 2px;
+    border-style: dashed;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+p {
+    text-align: justify;
+    font-size: 50px;
+    margin-left: 60px;
+}
+
+span {
+    color: brown;
+    background-color: lightsalmon;
+    padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+    background-color: lightskyblue;
+    margin: 20px;
+    font-size: 30px;
+    width: fit-content;
+}
+
