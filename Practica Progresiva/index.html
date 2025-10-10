@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correcion profesor tarjeta productos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-700">
+    <!-- CABECERA con vídeo -->
+    <header class="relative w-full h-[40vh] overflow-hidden">
+      <!-- Vídeo -->
+      <video
+        id="header-video"
+        autoplay
+        muted
+        loop
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source id="video-src" src="assets/header.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Botón en la parte inferior -->
+      <a
+        class="absolute w-3xs bottom-10 left-1/2 -translate-x-1/2 bg-white text-center text-xl font-bold py-3 px-6 rounded-lg hover:bg-blue-300 transition duration-300"
+        onclick="clickBoton()"
+      >
+        MAGIA
+      </a>
+    </header>
+    <!-- Contenedor principal productos -->
+    <div class="max-w-6xl mx-auto p-6 text-center">
+      <!-- Tarjeta 1 -->
+      <!--                                  align-top para que las tarjetas estén a la misma altura por arriba-->
+      <div
+        class="w-full md:w-1/3 lg:w-1/5 m-2 inline-block align-top ease-in-out hover:scale-105 transition duration-600"
+      >
+        <div class="bg-white rounded-lg shadow p-4">
+          <!-- objecto cover para que la imagen no se deforme -->
+          <img
+            class="w-full h-48 object-cover rounded-lg mb-3"
+            src="https://png.pngtree.com/png-vector/20240313/ourmid/pngtree-orange-swimming-pool-float-ring-png-image_11943118.png"
+            alt="flotador"
+          />
+          <h2 class="text-lg font-bold mb-2">Flotador</h2>
+          <p class="text-sm text-gray-600 mb-3">Descripción del flotador</p>
+          <p class="italic text-lg font-bold text-green-600 mb-3">7.99€</p>
+          <button
+            class="w-full py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-900 transition ease-out"
+          >
+            Comprar
+          </button>
+        </div>
+      </div>
+      <!-- Tarjeta 2 -->
+      <div
+        class="w-full md:w-1/3 lg:w-1/5 m-2 inline-block align-top ease-in-out hover:scale-105 transition duration-600"
+      >
+        <div class="bg-white rounded-lg shadow p-4">
+          <!-- objecto cover para que la imagen no se deforme -->
+          <img
+            class="w-full h-48 object-cover rounded-lg mb-3"
+            src="https://png.pngtree.com/png-clipart/20240508/original/pngtree-inflatable-swimming-air-mattresses-png-image_15039085.png"
+            alt="colchoneta"
+          />
+          <h2 class="text-lg font-bold mb-2">Colchoneta</h2>
+          <p class="text-sm text-gray-600 mb-3">Descripción de la colchoneta</p>
+          <p class="italic text-lg font-bold text-green-600 mb-3">14.99€</p>
+          <button
+            class="w-full py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-900 transition ease-out"
+          >
+            Comprar
+          </button>
+        </div>
+      </div>
+      <!-- Tarjeta 3 -->
+      <div
+        class="w-full md:w-1/3 lg:w-1/5 m-2 inline-block align-top ease-in-out hover:scale-105 transition duration-600"
+      >
+        <div class="bg-white rounded-lg shadow p-4">
+          <!-- objecto cover para que la imagen no se deforme -->
+          <img
+            class="w-full h-48 object-cover rounded-lg mb-3"
+            src="https://png.pngtree.com/png-clipart/20250608/original/pngtree-colorful-toy-water-gun-png-image_21139942.png"
+            alt="pistola-de-agua"
+          />
+          <h2 class="text-lg font-bold mb-2">Pistola de agua</h2>
+          <p class="text-sm text-gray-600 mb-3">Descripción de la pistola</p>
+          <p class="italic text-lg font-bold text-green-600 mb-3">9.99€</p>
+          <button
+            class="w-full py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-900 transition ease-out"
+          >
+            Comprar
+          </button>
+        </div>
+      </div>
+      <div
+        class="w-full md:w-1/3 lg:w-1/5 m-2 inline-block align-top ease-in-out hover:scale-105 transition duration-600"
+      >
+        <div class="bg-white rounded-lg shadow p-4">
+          <!-- objecto cover para que la imagen no se deforme -->
+          <img
+            class="w-full h-48 object-cover rounded-lg mb-3"
+            src="https://png.pngtree.com/png-vector/20240313/ourmid/pngtree-orange-swimming-pool-float-ring-png-image_11943118.png"
+            alt="flotador"
+          />
+          <h2 class="text-lg font-bold mb-2">Flotador</h2>
+          <p class="text-sm text-gray-600 mb-3">Descripción del flotador</p>
+          <p class="italic text-lg font-bold text-green-600 mb-3">7.99€</p>
+          <button
+            class="w-full py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-900 transition ease-out"
+          >
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="funciones.js"></script>
+</html>
