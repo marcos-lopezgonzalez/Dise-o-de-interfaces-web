@@ -1,0 +1,30 @@
+.contenedor {
+  background: black;
+  height: 500px;
+  width: auto;
+  padding: 15px;
+
+  display: flex;
+
+  /* Columnas */
+  flex-direction: column;
+  /* Filas */
+  flex-direction: row;
+  /* Columnas inversas */
+  flex-direction: column-reverse;
+  /* Filas inversas*/
+  flex-direction: row-reverse;
+}
+
+.caja {
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+  background: purple;
+
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
