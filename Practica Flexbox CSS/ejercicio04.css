@@ -1,0 +1,18 @@
+.contenedor {
+  background: black;
+  height: 500px;
+  width: auto;
+  padding: 15px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.caja {
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+  background: purple;
+}

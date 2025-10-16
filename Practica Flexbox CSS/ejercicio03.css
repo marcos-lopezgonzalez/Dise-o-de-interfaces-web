@@ -13,3 +13,30 @@
   margin: 15px;
   background: purple;
 }
+
+.cajaPequeña {
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+  background: purple;
+
+  flex-grow: 1;
+}
+
+.cajaGrande {
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+  background: purple;
+
+  flex-grow: 3;
+}
+
+.cajaEstatica {
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+  background: purple;
+
+  flex-grow: 0;
+}
