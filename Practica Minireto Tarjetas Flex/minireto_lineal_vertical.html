@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minireto – Lineal de tarjetas (Base – Móvil vertical)</title>
+    <!-- Tailwind CDN para pruebas -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-200 text-slate-800 min-h-screen">
+    <!-- TODO: añade un fondo suave y tipografía legible al body. 
+       Sugerencia breve: bg-slate-100, text-slate-800, min-h-screen. -->
+
+    <main class="max-w-6xl mx-auto p-4">
+      <!-- TODO: contenedor centrado con ancho máx. y padding.
+         Pista: max-w-6xl, mx-auto, p-4. -->
+
+      <!-- LINEAL de tarjetas -->
+      <!-- Requisitos:
+         - Base (móvil): flex-col + gap (lista vertical sin overflow-x).
+         - md: pasar a fila horizontal con scroll (flex-row, flex-nowrap, overflow-x-auto).
+         - lg: permitir wrap (flex-wrap) y quitar overflow-x si procede. -->
+      <section
+        class="flex flex-col gap-6 md:flex-row md:flex-nowrap md:overflow-x-auto lg:flex-wrap lg:overflow-visible"
+      >
+        <!-- Tarjeta patrón: crea 4–6 tarjetas similares -->
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+        <article
+          class="flex flex-col border-2 rounded-md gap-1 p-5 md:shrink-0"
+        >
+          <div class="">
+            <!-- <div class="bg-slate-400 h-40 w-full">IMG 1</div> -->
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1785/1785348.png"
+              alt="zapatilla"
+              class="h-50 w-50 mx-auto object-fit md:object-cover md:w-full lg:object-cover lg:w-full"
+            />
+          </div>
+          <div class="mt-2">
+            <h3 class="font-bold text-xl">Zapatilla to guapa</h3>
+            <p class="mt-2">Pff como mola esta zapatilla cómprala ya</p>
+          </div>
+          <button class="w-full p-2 bg-green-500 border-0 rounded-xl">
+            Comprar
+          </button>
+        </article>
+      </section>
+
+      <!-- Pistas mínimas (no poner las clases exactas):
+         • Section (base): flex-col + gap; md: flex-row flex-nowrap overflow-x-auto; lg: flex-wrap.
+         • Tarjeta: en md usar basis fijo y shrink-0 para estabilidad; estructura interna flex-col justify-between.
+         • Bloque imagen: altura fija (h-36), centrado (flex items-center justify-center), bg neutro.
+         • Botones: color base + hover, padding y rounded. -->
+    </main>
+  </body>
+</html>
