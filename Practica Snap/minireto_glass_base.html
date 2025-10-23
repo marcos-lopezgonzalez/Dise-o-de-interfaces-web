@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minireto – Tira glass (Base)</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <!-- https://tailscan.com/gradients -->
+  <body
+    class="min-h-screen bg-linear-to-r font-arial from-cyan-700 via-blue-500 to-indigo-600"
+  >
+    <main class="max-w-6xl mx-auto">
+      <header class="mb-5">
+        <h1 class="text-white text-4xl">Destacados de la semana</h1>
+        <p class="text-gray-300">
+          Explora en móvil (snap vertical) y en pantallas medias (snap
+          horizontal).
+        </p>
+      </header>
+
+      <!-- Contenedor de tarjetas con scroll-snap -->
+      <!-- Base: columna + overflow-y-auto + snap-y + snap-mandatory -->
+      <!-- md: fila + overflow-x-auto + snap-x -->
+      <!-- lg: wrap + overflow visible -->
+      <!-- <section class="/* TODO */"> -->
+      <section
+        class="flex flex-col gap-4 overflow-y-auto snap-y snap-mandatory md:flex-row md:overflow-x-auto md:snap-x lg:flex-wrap lg:overflow-visible"
+      >
+        <!-- Tarjeta (duplica 3–5 veces) -->
+        <article
+          class="w-full md:basis-100 md:shrink-0 pt-2 pb-2 pr-4 pl-4 bg-white/20 backdrop-blur-md text-white rounded-xl snap-center hover:bg-white/30 transition"
+        >
+          <div>
+            <h3 class="font-bold text-xl">Curso Tailwind Pro</h3>
+            <p class="pt-5">
+              Maqueta rápido con utilidades y patrones modernos.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-20">
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-md text-red-500 font-bold"
+              >Flex</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-sm text-red-500 font-bold"
+              >Scroll-snap</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-xl text-red-500 font-bold"
+              >Gradient</span
+            >
+          </div>
+          <button class="mt-20 bg-red-500 pt-1 pb-1 pr-2 pl-2 rounded-2xl">
+            Empezar
+          </button>
+        </article>
+
+        <article
+          class="w-full md:basis-100 md:shrink-0 pt-2 pb-2 pr-4 pl-4 bg-white/20 backdrop-blur-md text-white rounded-xl snap-center hover:bg-white/30 transition"
+        >
+          <div>
+            <h3 class="font-bold text-xl">UI Kits modernos</h3>
+            <p class="pt-5">Componentes accesibles listos para producción.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-20">
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-md text-purple-500 font-bold"
+              >Badges</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-sm text-purple-500 font-bold"
+              >Cards</span
+            >
+          </div>
+          <button class="mt-20 bg-purple-500 pt-1 pb-1 pr-2 pl-2 rounded-2xl">
+            Empezar
+          </button>
+        </article>
+        <article
+          class="w-full md:basis-100 md:shrink-0 pt-2 pb-2 pr-4 pl-4 bg-white/20 backdrop-blur-md text-white rounded-xl snap-center hover:bg-white/30 transition"
+        >
+          <div>
+            <h3 class="font-bold text-xl">Animaciones sutiles</h3>
+            <p class="pt-5">Transiciones, hover states y microinteracciones.</p>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mt-20">
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-md text-pink-500 font-bold"
+              >Hover</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-sm text-pink-500 font-bold"
+              >Transitions</span
+            >
+          </div>
+          <button class="mt-20 bg-pink-500 pt-1 pb-1 pr-2 pl-2 rounded-2xl">
+            Practicar
+          </button>
+        </article>
+        <article
+          class="w-full md:basis-100 md:shrink-0 pt-2 pb-2 pr-4 pl-4 bg-white/20 backdrop-blur-md text-white rounded-xl snap-center hover:bg-white/30 transition"
+        >
+          <div>
+            <h3 class="font-bold text-xl">Accesibilidad</h3>
+            <p class="pt-5">Contraste, foco y tamaños táctiles adecuados</p>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-20">
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-md text-green-500 font-bold"
+              >Contrast</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-sm text-green-500 font-bold"
+              >Focus</span
+            >
+          </div>
+          <button class="mt-20 bg-green-500 pt-1 pb-1 pr-2 pl-2 rounded-2xl">
+            Empezar
+          </button>
+        </article>
+        <article
+          class="w-full md:basis-100 md:shrink-0 pt-2 pb-2 pr-4 pl-4 bg-white/20 backdrop-blur-md text-white rounded-xl snap-center hover:bg-white/30 transition"
+        >
+          <div>
+            <h3 class="font-bold text-xl">Curso Tailwind Pro</h3>
+            <p class="pt-5">
+              Maqueta rápido con utilidades y patrones modernos.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-20">
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-xl text-red-500 font-bold"
+              >Flex</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-xl text-red-500 font-bold"
+              >Scroll-snap</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-xl text-red-500 font-bold"
+              >Gradient</span
+            >
+          </div>
+          <button class="mt-20 bg-red-500 pt-1 pb-1 pr-2 pl-2 rounded-2xl">
+            Empezar
+          </button>
+        </article>
+        <article
+          class="w-full md:basis-100 md:shrink-0 pt-2 pb-2 pr-4 pl-4 bg-white/20 backdrop-blur-md text-white rounded-xl snap-center hover:bg-white/30 transition"
+        >
+          <div>
+            <h3 class="font-bold text-xl">Curso Tailwind Pro</h3>
+            <p class="pt-5">
+              Maqueta rápido con utilidades y patrones modernos.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-20">
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-xl text-red-500 font-bold"
+              >Flex</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-xl text-red-500 font-bold"
+              >Scroll-snap</span
+            >
+            <span
+              class="pt-1 pb-1 pl-2 pr-2 rounded-xl bg-white backdrop-blur-xl text-red-500 font-bold"
+              >Gradient</span
+            >
+          </div>
+          <button class="mt-20 bg-red-500 pt-1 pb-1 pr-2 pl-2 rounded-2xl">
+            Empezar
+          </button>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
