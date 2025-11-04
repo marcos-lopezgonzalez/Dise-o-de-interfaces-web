@@ -28,11 +28,11 @@
   <body>
     <h1>Prácticas básicas de CSS Grid</h1>
 
+    <h2>Galería 1</h2>
     <section
       id="galeria"
       style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px"
     >
-      <h2>Galería 1</h2>
       <div class="card">1</div>
       <div class="card">
         2 (con más texto para probar crecimiento de altura)
@@ -43,11 +43,11 @@
       <div class="card">6</div>
     </section>
 
+    <h2>Galería 2</h2>
     <section
       id="galeria2"
       style="display: grid; grid-template-columns: 150px 150px 150px; gap: 8px"
     >
-      <h2>Galería 2</h2>
       <div class="card">1</div>
       <div class="card">
         2 (con más texto para probar crecimiento de altura)
@@ -58,11 +58,11 @@
       <div class="card">6</div>
     </section>
 
+    <h2>Galería 3</h2>
     <section
       id="galeria3"
       style="display: grid; gap: 8px; grid-auto-rows: minmax(100px, auto)"
     >
-      <h2>Galería 3</h2>
       <div class="card">1</div>
       <div class="card">
         2 (con más texto para probar crecimiento de altura)
@@ -73,6 +73,7 @@
       <div class="card">6</div>
     </section>
 
+    <h2>Galería 4</h2>
     <section
       id="galeria4"
       style="
@@ -81,7 +82,6 @@
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       "
     >
-      <h2>Galería 4</h2>
       <div class="card">1</div>
       <div class="card">
         2 (con más texto para probar crecimiento de altura)
@@ -92,9 +92,9 @@
       <div class="card">6</div>
     </section>
 
-    <section id="destacados" style="display: grid;">
-      <h2>Destacados</h2>
-      <div class="card" style="grid-column: span 2;">A</div>
+    <h2>Destacados</h2>
+    <section id="destacados" style="display: grid">
+      <div class="card" style="grid-column: span 2">A</div>
       <div class="card">B</div>
       <div class="card">C</div>
       <div class="card">D</div>
