@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="..\tailwind.js"></script>
+    <title>Portafolio – Tailwind</title>
+  </head>
+  <body class="bg-gray-500 max-w-6xl mx-auto">
+    <!-- CONTENEDOR PRINCIPAL: aplicar márgenes y ancho máximo -->
+    <div>
+      <!-- HEADER: aplicar flex para alinear el título y el menú -->
+      <header class="bg-gray-300 flex items-center justify-between p-4">
+        <h1 class="text-4xl">Mi Portafolio</h1>
+        <nav>
+          <ul class="flex space-x-6">
+            <li class="text-2xl"><a href="#">Inicio</a></li>
+            <li class="text-2xl"><a href="#">Proyectos</a></li>
+            <li class="text-2xl"><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- ZONA PRINCIPAL: aplicar grid para dividir en dos columnas -->
+      <div class="grid grid-cols-1 md:grid-cols-[300px_1fr]">
+        <!-- ASIDE: aplicar fondo, borde redondeado y espaciado -->
+        <aside class="bg-gray-400 p-4 rounded-lg m-4">
+          <h2 class="font-bold text-2xl">Sobre mí</h2>
+          <p class="text-xl pt-4">
+            Texto de ejemplo sobre el autor o autora del portafolio.
+          </p>
+
+          <h3 class="text-xl font-bold pt-4">Enlaces</h3>
+          <!-- Aplicar lista vertical con espaciado -->
+          <ul>
+            <li class="pt-2 underline"><a href="#">LinkedIn</a></li>
+            <li class="underline"><a href="#">GitHub</a></li>
+            <li class="underline"><a href="#">CV</a></li>
+          </ul>
+        </aside>
+
+        <!-- MAIN: aplicar grid o flex para la galería de proyectos -->
+        <main class="p-4">
+          <h2 class="font-bold text-4xl pb-4">Proyectos</h2>
+
+          <!-- Galería de tarjetas -->
+          <!-- NO PONER ESPACIOS EN TAILWIND -->
+          <!-- NO PONER ESPACIOS EN TAILWIND -->
+          <!-- NO PONER ESPACIOS EN TAILWIND -->
+          <!-- NO PONER ESPACIOS EN TAILWIND -->
+          <section
+            class="grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-4"
+          >
+            <article class="bg-white flex flex-col rounded-lg">
+              <!-- Aplicar fondo blanco, borde redondeado y sombra -->
+              <img
+                class="rounded-t-lg"
+                src="https://picsum.photos/640/360?1"
+                alt="Proyecto 1"
+              />
+              <div class="p-2">
+                <h3 class="font-bold">Proyecto 1</h3>
+                <p>Breve descripción del proyecto.</p>
+                <a class="font-bold underline" href="#">Ver más</a>
+              </div>
+            </article>
+
+            <article class="bg-white flex flex-col rounded-lg">
+              <img
+                class="rounded-t-lg"
+                src="https://picsum.photos/640/360?2"
+                alt="Proyecto 2"
+              />
+              <div class="p-2">
+                <h3 class="font-bold">Proyecto 2</h3>
+                <p>Breve descripción del proyecto.</p>
+                <a class="font-bold underline" href="#">Ver más</a>
+              </div>
+            </article>
+
+            <article class="bg-white flex flex-col rounded-lg">
+              <img
+                class="rounded-t-lg"
+                src="https://picsum.photos/640/360?3"
+                alt="Proyecto 3"
+              />
+              <div class="p-2">
+                <h3 class="font-bold">Proyecto 3</h3>
+                <p>Breve descripción del proyecto.</p>
+                <a class="font-bold underline" href="#">Ver más</a>
+              </div>
+            </article>
+            <article class="bg-white flex flex-col rounded-lg">
+              <img
+                class="rounded-t-lg"
+                src="https://picsum.photos/640/360?3"
+                alt="Proyecto 3"
+              />
+              <div class="p-2">
+                <h3 class="font-bold">Proyecto 3</h3>
+                <p>Breve descripción del proyecto.</p>
+                <a class="font-bold underline" href="#">Ver más</a>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+
+      <!-- FOOTER: centrar texto y añadir separación superior -->
+      <footer>© 2025 – Tu Nombre</footer>
+    </div>
+  </body>
+</html>
