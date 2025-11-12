@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -6,31 +6,45 @@
     <script src="..\tailwind.js"></script>
     <title>Portafolio – Tailwind</title>
   </head>
-  <body class="bg-gray-500 max-w-6xl mx-auto">
+  <body class="mx-auto max-w-6xl bg-gray-500">
     <!-- CONTENEDOR PRINCIPAL: aplicar márgenes y ancho máximo -->
     <div>
       <!-- HEADER: aplicar flex para alinear el título y el menú -->
-      <header class="bg-gray-300 flex items-center justify-between p-4">
-        <h1 class="text-4xl">Mi Portafolio</h1>
+      <!--
+        FLEX los pone en la misma linea
+        H-AUTO para que ocupe lo necesario
+        ITEMS-CENTER para centrarlos verticalmente
+        JUSTIFY-BETWEEN para dejar espacio entre el h1 y el nav
+      -->
+      <header class="flex h-auto items-center justify-between border-b-1 border-gray-600 bg-gray-300 p-4">
+        <h1 class="text-2xl">Mi Portafolio</h1>
         <nav>
-          <ul class="flex space-x-6">
-            <li class="text-2xl"><a href="#">Inicio</a></li>
-            <li class="text-2xl"><a href="#">Proyectos</a></li>
-            <li class="text-2xl"><a href="#">Contacto</a></li>
+          <!--
+            FLEX-COL para mostrar por columnas en sm
+            FLEX-ROW para mostrarlo en una fila en tamaños md o superiores
+          -->
+          <ul class="flex flex-col gap-4 md:flex-row">
+            <li class="text-xl"><a href="#">Inicio</a></li>
+            <li class="text-xl"><a href="#">Proyectos</a></li>
+            <li class="text-xl"><a href="#">Contacto</a></li>
           </ul>
         </nav>
       </header>
 
       <!-- ZONA PRINCIPAL: aplicar grid para dividir en dos columnas -->
-      <div class="grid grid-cols-1 md:grid-cols-[300px_1fr]">
+      <!--
+        GRID para el contenedor
+        MIN-H-SCREEN para que ocupe todo lo que pueda
+        grid-cols-1 para que en tamaño sm sea solo 1 columna
+        md:grid-cols-[300px_1fr] para que sea una columna de 300px ancho y otra de 1fr ancho en tamaños md o superiores
+      -->
+      <div class="grid min-h-screen grid-cols-1 bg-gray-300 md:grid-cols-[300px_1fr]">
         <!-- ASIDE: aplicar fondo, borde redondeado y espaciado -->
-        <aside class="bg-gray-400 p-4 rounded-lg m-4">
-          <h2 class="font-bold text-2xl">Sobre mí</h2>
-          <p class="text-xl pt-4">
-            Texto de ejemplo sobre el autor o autora del portafolio.
-          </p>
+        <aside class="m-4 rounded-lg bg-white p-4">
+          <h2 class="text-2xl font-bold">Sobre mí</h2>
+          <p class="pt-4 text-xl">Texto de ejemplo sobre el autor o autora del portafolio.</p>
 
-          <h3 class="text-xl font-bold pt-4">Enlaces</h3>
+          <h3 class="pt-4 text-xl font-bold">Enlaces</h3>
           <!-- Aplicar lista vertical con espaciado -->
           <ul>
             <li class="pt-2 underline"><a href="#">LinkedIn</a></li>
@@ -41,62 +55,48 @@
 
         <!-- MAIN: aplicar grid o flex para la galería de proyectos -->
         <main class="p-4">
-          <h2 class="font-bold text-4xl pb-4">Proyectos</h2>
+          <h2 class="pb-4 text-4xl font-bold">Proyectos</h2>
 
           <!-- Galería de tarjetas -->
           <!-- NO PONER ESPACIOS EN TAILWIND -->
           <!-- NO PONER ESPACIOS EN TAILWIND -->
           <!-- NO PONER ESPACIOS EN TAILWIND -->
           <!-- NO PONER ESPACIOS EN TAILWIND -->
-          <section
-            class="grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-4"
-          >
-            <article class="bg-white flex flex-col rounded-lg">
+          <!--
+            GRID para la seccion de tarjetas
+            GRID-COLS-[repeat(auto-fit,minmax(16rem,1fr))] para que se muestren X columnas (auto-fit) de un tamaño minimo 16rem y máximo 1fr
+          -->
+          <section class="grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-4">
+            <article class="flex flex-col rounded-lg bg-white shadow-md">
               <!-- Aplicar fondo blanco, borde redondeado y sombra -->
-              <img
-                class="rounded-t-lg"
-                src="https://picsum.photos/640/360?1"
-                alt="Proyecto 1"
-              />
-              <div class="p-2">
+              <img class="rounded-t-lg" src="https://picsum.photos/640/360?1" alt="Proyecto 1" />
+              <div class="p-4">
                 <h3 class="font-bold">Proyecto 1</h3>
                 <p>Breve descripción del proyecto.</p>
                 <a class="font-bold underline" href="#">Ver más</a>
               </div>
             </article>
 
-            <article class="bg-white flex flex-col rounded-lg">
-              <img
-                class="rounded-t-lg"
-                src="https://picsum.photos/640/360?2"
-                alt="Proyecto 2"
-              />
-              <div class="p-2">
+            <article class="flex flex-col rounded-lg bg-white shadow-md">
+              <img class="rounded-t-lg" src="https://picsum.photos/640/360?2" alt="Proyecto 2" />
+              <div class="p-4">
                 <h3 class="font-bold">Proyecto 2</h3>
                 <p>Breve descripción del proyecto.</p>
                 <a class="font-bold underline" href="#">Ver más</a>
               </div>
             </article>
 
-            <article class="bg-white flex flex-col rounded-lg">
-              <img
-                class="rounded-t-lg"
-                src="https://picsum.photos/640/360?3"
-                alt="Proyecto 3"
-              />
-              <div class="p-2">
+            <article class="flex flex-col rounded-lg bg-white shadow-md">
+              <img class="rounded-t-lg" src="https://picsum.photos/640/360?3" alt="Proyecto 3" />
+              <div class="p-4">
                 <h3 class="font-bold">Proyecto 3</h3>
                 <p>Breve descripción del proyecto.</p>
                 <a class="font-bold underline" href="#">Ver más</a>
               </div>
             </article>
-            <article class="bg-white flex flex-col rounded-lg">
-              <img
-                class="rounded-t-lg"
-                src="https://picsum.photos/640/360?3"
-                alt="Proyecto 3"
-              />
-              <div class="p-2">
+            <article class="flex flex-col rounded-lg bg-white shadow-md">
+              <img class="rounded-t-lg" src="https://picsum.photos/640/360?4" alt="Proyecto 3" />
+              <div class="p-4">
                 <h3 class="font-bold">Proyecto 3</h3>
                 <p>Breve descripción del proyecto.</p>
                 <a class="font-bold underline" href="#">Ver más</a>
@@ -107,7 +107,7 @@
       </div>
 
       <!-- FOOTER: centrar texto y añadir separación superior -->
-      <footer>© 2025 – Tu Nombre</footer>
+      <footer class="h-auto bg-black pt-4 text-center text-xl text-white">© 2025 – Marcos López González</footer>
     </div>
   </body>
 </html>
