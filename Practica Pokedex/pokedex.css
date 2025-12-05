@@ -1,0 +1,162 @@
+/*
+ * PROYECTO POKÉDEX - ARCHIVO DEL ALUMNADO
+ *
+ * PISTAS:
+ * - Organiza tus estilos por bloques (header, main, pokedex, tarjetas, etc.).
+ * - Empieza por cosas básicas: tipografía, colores, márgenes, fondo...
+ * - Más adelante puedes añadir maquetación con flexbox o grid (según hayamos visto en clase).
+ */
+
+/* PISTA: estilo general de la página */
+body {
+  /* PISTA: elige una fuente sencilla (por ejemplo: Arial, sans-serif) */
+  /* PISTA: pon un color de fondo suave y un color de texto legible */
+  font-family: Arial;
+  background-color: gainsboro;
+}
+
+/* PISTA: estilos para el header (zona superior) */
+.header {
+  /* PISTA: centra el texto y pon algo de relleno (padding) */
+  color: white;
+  background-color: rgb(203, 51, 51);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: end;
+  padding: 15px;
+}
+
+.header button {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.header button:hover {
+  background-color: orange;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input {
+  padding: 5px;
+}
+
+.subtitle {
+  /* PISTA: puedes hacer que el subtítulo tenga un tamaño algo más pequeño y un color diferente */
+}
+
+/* PISTA: contenedor principal */
+.main {
+  /* PISTA: limita el ancho de la página y céntrala con margin */
+  margin-top: 50px;
+}
+
+.pMain {
+  text-align: center;
+}
+
+/* PISTA: contenedor donde irán las tarjetas de Pokémon */
+.pokedex {
+  /* PISTA:
+     * - Aquí puedes usar display: flex; o display: grid; para crear una rejilla.
+     * - Añade separación (gap) entre tarjetas.
+     */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  justify-content: center;
+  gap: 20px;
+}
+
+/* PISTA: estilo de cada tarjeta de Pokémon */
+.pokemon-card {
+  /* PISTA:
+     * - Pon un fondo blanco o claro.
+     * - Añade un borde suave y sombra ligera.
+     * - Añade padding dentro de la tarjeta.
+     */
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pokemon-card.fuego:hover {
+  background-color: rgb(173, 63, 63);
+}
+
+.pokemon-card.agua:hover {
+  background-color: rgb(89, 182, 240);
+}
+
+.pokemon-card.planta:hover {
+  background-color: rgb(103, 207, 103);
+}
+
+.pokemon-card.electrico:hover {
+  background-color: rgb(242, 242, 106);
+}
+
+.pokemon-card.normal:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.pokemon-card img {
+  /* PISTA: haz que la imagen no se salga de la tarjeta (width: 100%; height: auto;) */
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.pokemon-card h3 {
+  /* PISTA: estilo para el nombre del Pokémon */
+  font-style: italic;
+}
+
+.pokemon-card p {
+  /* PISTA: estilo para el texto secundario (tipo, número, etc.) */
+  font-size: 15px;
+}
+
+.pNivel {
+  width: min-content;
+  color: blue;
+  background-color: rgb(180, 243, 243);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 15px;
+}
+
+.pTipo {
+  width: min-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 15px;
+}
+
+.pokemon-card div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: -15px;
+}
+
+.pokemon-card div h3 {
+  justify-self: start;
+}
+
+.pokemon-card div p {
+  justify-self: end;
+}
+
+.footer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
