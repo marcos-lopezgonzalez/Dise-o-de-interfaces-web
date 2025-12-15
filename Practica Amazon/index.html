@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-Amazon · DIW</title>
+
+    <!-- Tailwind CDN -->
+    <script src="./../tailwind.js"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              marca: {
+                500: "#6366f1",
+                600: "#4f46e5",
+                700: "#4338ca",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900">
+    <!-- ======================================
+       HEADER
+  ======================================= -->
+    <header class="sticky top-0 shadow-md pl-5 pr-5 pt-2 pb-2 bg-white">
+      <!-- TODO 1:
+         Convierte este header en:
+         - sticky
+         - con fondo blanco
+         - sombra suave
+         - padding horizontal
+    -->
+      <div class="flex flex-row gap-5 p-2 md:ml-10">
+        <!-- Logo -->
+        <div class="flex flex-row gap-2">
+          <!-- TODO 2:
+             Estiliza el logo:
+             - forma cuadrada o redonda
+             - color principal
+             - texto centrado
+        -->
+          <span
+            class="bg-indigo-500 pt-1 pb-1 pl-2 pr-2 text-2xl font-bold rounded-md self-center text-white"
+            >M</span
+          >
+          <h1 class="hidden md:block font-bold text-xl self self-center">
+            Mini-Amazon
+          </h1>
+        </div>
+
+        <!-- Buscador -->
+        <div class="flex grow">
+          <!-- TODO 3:
+             Estiliza este input:
+             - ancho completo
+             - borde suave
+             - padding cómodo
+             - focus visible
+        -->
+          <input
+            class="grow border-1 border-gray-400 border-solid rounded-md p-2"
+            type="search"
+            placeholder="Buscar productos..."
+          />
+        </div>
+
+        <!-- Carrito -->
+        <div>
+          <!-- TODO 4:
+             Diseña el botón carrito:
+             - icono o texto
+             - contador circular
+             - hover
+        -->
+          <button
+            class="relative flex items-center bg-indigo-500 pt-1 pb-1 pl-2 pr-2 rounded-md text-2xl md:mr-10 hover:bg-indigo-600 transition"
+          >
+            🛒
+            <span class="text-white text-lg hidden md:inline">Carrito</span>
+            <span
+              class="absolute -top-2 -right-2 flex justify-center items-center text-sm h-5 w-5 bg-red-500 text-white rounded-full"
+              >0</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================
+       CONTENIDO PRINCIPAL
+  ======================================= -->
+    <main
+      class="grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_2fr_1fr] ml-5 mr-5 md:mr-20 md:ml-20 mt-10 gap-10"
+    >
+      <!-- ======================================
+         FILTROS (SIDEBAR)
+    ======================================= -->
+      <aside
+        class="bg-white p-5 flex flex-col gap-5 h-fit shadow-2xl rounded-lg"
+      >
+        <!-- TODO 5:
+           Convierte este aside en:
+           - columna lateral en desktop
+           - oculto en móvil
+           - tarjeta con borde o sombra
+      -->
+
+        <h2 class="font-bold text-2xl">Filtros</h2>
+
+        <!-- Categorías -->
+        <section class="flex flex-col gap-5">
+          <h3 class="font-bold">Categorías</h3>
+
+          <!-- TODO 6:
+             Diseña estos botones como CHIPS:
+             - redondeados
+             - tamaño pequeño
+             - hover
+        -->
+          <div
+            class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-2"
+          >
+            <button
+              class="pt-1 pb-1 pl-2 pr-2 text-sm rounded-2xl bg-gray-100 hover:bg-gray-200 transition"
+            >
+              Periféricos
+            </button>
+            <button
+              class="pt-1 pb-1 pl-2 pr-2 text-sm rounded-2xl bg-gray-100 hover:bg-gray-200 transition"
+            >
+              Componentes
+            </button>
+            <button
+              class="pt-1 pb-1 pl-2 pr-2 text-sm rounded-2xl bg-gray-100 hover:bg-gray-200 transition"
+            >
+              Accesorios
+            </button>
+          </div>
+        </section>
+
+        <!-- Precio -->
+        <section class="flex flex-col gap-5">
+          <h3 class="font-bold">Precio máximo</h3>
+
+          <!-- TODO 7:
+             Mejora el diseño del range
+             (color, tamaño, separación)
+        -->
+          <input type="range" min="0" max="1000" />
+          <p>Hasta <span class="font-bold">1000 €</span></p>
+        </section>
+
+        <!-- Stock -->
+        <section>
+          <label>
+            <input type="checkbox" />
+            Solo en stock
+          </label>
+        </section>
+      </aside>
+
+      <!-- ======================================
+         PRODUCTOS
+    ======================================= -->
+      <section>
+        <!-- Cabecera sección -->
+        <div class="flex flex-row justify-between mb-5">
+          <!-- TODO 8:
+             Alinea este contenido en horizontal
+             y separa título y botón
+        -->
+          <h2 class="font-bold text-2xl">Productos</h2>
+          <button class="text-indigo-500 text-base font-bold">
+            Limpiar filtros
+          </button>
+        </div>
+
+        <!-- Grid de productos -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-10"
+        >
+          <!-- TODO 9:
+             Convierte este contenedor en un GRID:
+             - 1 columna en móvil
+             - 2 en tablet
+             - 3 o 4 en desktop
+             - gap consistente
+        -->
+
+          <!-- ======================
+             TARJETA DE PRODUCTO
+        ======================= -->
+          <article
+            class="bg-white shadow-md rounded-lg hover:scale-105 hover:shadow-xl hover:bg-indigo-100 transition ease-in"
+          >
+            <!-- TODO 10:
+               Diseña la tarjeta:
+               - fondo blanco
+               - borde o sombra
+               - hover con elevación
+          -->
+
+            <!-- Imagen -->
+            <div>
+              <!-- TODO 11:
+                 Mantén proporción de imagen
+                 y evita que se deforme
+            -->
+              <img
+                class="rounded-t-lg overflow-hidden"
+                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=60"
+                alt="Producto"
+              />
+            </div>
+
+            <!-- Contenido -->
+            <div class="flex flex-col p-4">
+              <!-- TODO 12:
+                 Jerarquía tipográfica:
+                 - nombre destacado
+                 - categoría secundaria
+            -->
+              <h3 class="font-bold text-lg">Ratón inalámbrico</h3>
+              <p class="text-sm text-gray-500 mt-3">Periféricos</p>
+
+              <!-- Precio + botón -->
+              <div class="flex justify-between mt-5">
+                <!-- TODO 13:
+                   Alinea precio y botón
+                   en una misma fila
+              -->
+                <span class="font-bold text-2xl text-indigo-500">19,99 €</span>
+                <button
+                  class="bg-indigo-500 text-white pt-1 pr-3 pl-3 pb-1 rounded-md hover:bg-indigo-600 transition"
+                >
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 👉 DUPLICA ESTA TARJETA PARA MÁS PRODUCTOS -->
+          <article
+            class="bg-white shadow-md rounded-lg hover:scale-105 hover:shadow-xl hover:bg-indigo-100 transition ease-in"
+          >
+            <!-- TODO 10:
+               Diseña la tarjeta:
+               - fondo blanco
+               - borde o sombra
+               - hover con elevación
+          -->
+
+            <!-- Imagen -->
+            <div>
+              <!-- TODO 11:
+                 Mantén proporción de imagen
+                 y evita que se deforme
+            -->
+              <img
+                class="rounded-t-lg overflow-hidden"
+                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=60"
+                alt="Producto"
+              />
+            </div>
+
+            <!-- Contenido -->
+            <div class="flex flex-col p-4">
+              <!-- TODO 12:
+                 Jerarquía tipográfica:
+                 - nombre destacado
+                 - categoría secundaria
+            -->
+              <h3 class="font-bold text-lg">Ratón inalámbrico</h3>
+              <p class="text-sm text-gray-500 mt-3">Periféricos</p>
+
+              <!-- Precio + botón -->
+              <div class="flex justify-between mt-5">
+                <!-- TODO 13:
+                   Alinea precio y botón
+                   en una misma fila
+              -->
+                <span class="font-bold text-2xl text-indigo-500">19,99 €</span>
+                <button
+                  class="bg-indigo-500 text-white pt-1 pr-3 pl-3 pb-1 rounded-md hover:bg-indigo-600 transition"
+                >
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ======================================
+         CARRITO (SECCIÓN)
+    ======================================= -->
+      <section
+        class="bg-white p-5 flex flex-col gap-5 h-fit min-w-[300px] shadow-2xl rounded-lg"
+      >
+        <!-- TODO 14:
+           Diseña esta sección como:
+           - columna lateral en desktop
+           - bloque inferior en móvil
+      -->
+
+        <h2 class="font-bold text-2xl">Carrito</h2>
+
+        <!-- Producto carrito -->
+        <div class="flex items-center gap-3">
+          <!-- TODO 15:
+             Diseña una línea de carrito:
+             - miniatura
+             - nombre
+             - cantidad
+             - precio
+        -->
+          <img
+            class="h-16 w-16 rounded-md"
+            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=60"
+            alt=""
+          />
+          <div class="flex flex-col">
+            <p class="font-bold">Ratón inalámbrico</p>
+            <span>1 × 19,99 €</span>
+          </div>
+        </div>
+
+        <hr class="border-gray-300" />
+        <hr class="border-gray-300" />
+
+        <!-- Total -->
+        <div class="flex justify-between">
+          <!-- TODO 16:
+             Destaca el total visualmente
+        -->
+          <strong>Total:</strong>
+          <span class="font-bold text-2xl text-indigo-500">19,99 €</span>
+        </div>
+
+        <button
+          class="bg-indigo-500 text-white font-bold pt-3 pr-3 pl-3 pb-3 rounded-md hover:bg-indigo-600 transition"
+        >
+          Finalizar compra
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
