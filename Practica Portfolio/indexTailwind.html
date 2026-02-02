@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-Portfolio Premium (Alumno)</title>
+
+    <!-- Tailwind CDN -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="./../tailwind.js"></script>
+
+    <!-- CSS opcional para practicar sin Tailwind -->
+    <!-- <link rel="stylesheet" href="./styles.css" /> -->
+  </head>
+
+  <!-- ✅ Puedes dejar el tema oscuro con Tailwind o hacerlo en CSS.
+       Si prefieres 100% Tailwind, edita SOLO esta class. -->
+  <!-- TAILWIND AÑADIR AQUÍ (Body):
+       - color de fondo oscuro
+       - color de texto claro
+       - mínimo: min-h-screen
+  -->
+  <body class="bg-gray-900 text-white min-h-screen">
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <!-- TAILWIND AÑADIR AQUÍ (Header):
+         - sticky top-0 z-50
+         - fondo con transparencia
+         - borde inferior sutil
+         - "premium": backdrop-blur y/o sombra
+    -->
+    <header
+      class="site-header sticky top-0 z-50 bg-gray-900/60 backdrop-blur-md border-b-1 border-gray-700 md:pr-48 md:pl-48"
+    >
+      <!-- TAILWIND AÑADIR AQUÍ (Contenedor del header):
+           - centrado (mx-auto)
+           - ancho máximo (max-w-...)
+           - padding (px-..., py-...)
+           - layout flex (items-center justify-between)
+      -->
+      <div
+        class="container mx-auto px-5 py-5 text-center flex justify-between items-center"
+      >
+        <!-- TAILWIND AÑADIR AQUÍ (Logo):
+             - tipografía (font-semibold)
+             - tracking
+        -->
+        <a href="#inicio" class="logo tracking-wider font-semibold text-2xl">
+          Studio<span class="tracking-tight font-semibold text-xl text-blue-600"
+            >.neo</span
+          >
+        </a>
+
+        <!-- TAILWIND AÑADIR AQUÍ (Nav):
+             - flex en fila
+             - gap entre enlaces
+             - tamaño de texto
+             - color base
+        -->
+        <nav class="nav flex flex-row items-center gap-5 text-xl">
+          <!-- EFECTO:
+               Underline animado para .nav-link (CSS o Tailwind)
+               (si lo haces en Tailwind, recuerda: relative + after:)
+          -->
+          <a
+            class="nav-link hover:underline hover:scale-110 duration-100 hover:font-bold"
+            href="#inicio"
+            >Inicio</a
+          >
+          <a
+            class="nav-link hover:underline hover:scale-110 duration-100 hover:font-bold"
+            href="#proyectos"
+            >Proyectos</a
+          >
+          <a
+            class="nav-link hover:underline hover:scale-110 duration-100 hover:font-bold"
+            href="#servicios"
+            >Servicios</a
+          >
+          <a
+            class="nav-link hover:underline hover:scale-110 duration-100 hover:font-bold"
+            href="#contacto"
+            >Contacto</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+    <main class="mt-32">
+      <!-- =========================
+           HERO
+           ========================= -->
+
+      <!-- TAILWIND AÑADIR AQUÍ (Section hero):
+           - padding vertical (móvil y md+)
+      -->
+      <section id="inicio" class="hero pr-10 pl-10 md:pr-52 md:pl-52">
+        <!-- TAILWIND AÑADIR AQUÍ (Contenedor hero):
+             - mx-auto + max-w
+             - px
+        -->
+        <div class="container mx-auto max-w-fit">
+          <!-- TAILWIND AÑADIR AQUÍ (Grid hero):
+               - grid
+               - 1 columna en móvil
+               - 2 columnas en md+
+               - gap
+          -->
+          <div
+            class="hero-grid grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20"
+          >
+            <!-- TAILWIND AÑADIR AQUÍ (Bloque texto):
+                 - spacing vertical entre elementos (space-y-...)
+            -->
+            <div class="hero-content space-y-2 border-solid">
+              <!-- EXTRA (animación):
+                   aplica una clase propia (CSS) o Tailwind utilities
+                   para hacer fade + slide al cargar
+              -->
+
+              <!-- TAILWIND AÑADIR AQUÍ (Badge/píldora):
+                   - inline-flex items-center gap
+                   - rounded-full
+                   - border sutil
+                   - bg semitransparente
+                   - text-xs
+                   - padding
+              -->
+              <p
+                class="badge inline-flex rounded-full font-bold bg-blue-500/15 border-2 border-cyan-500 text-xs p-2"
+              >
+                ✨ Animaciones, transiciones y overlays
+              </p>
+
+              <!-- TAILWIND AÑADIR AQUÍ (H1):
+                   - text-4xl / md:text-5xl
+                   - font-semibold
+                   - tracking-tight
+              -->
+              <h1
+                class="hero-title text-4xl md:text-5xl font-semibold tracking-tighter"
+              >
+                Haz que tu web “se sienta pro” sin recargarla.
+              </h1>
+
+              <!-- TAILWIND AÑADIR AQUÍ (P):
+                   - color más suave
+                   - (opcional) max-w para no ocupar toda la línea
+              -->
+              <p class="hero-text text-gray-400">
+                Microinteracciones, efectos visuales y transiciones suaves. Lo
+                justo para que se note nivel.
+              </p>
+
+              <!-- TAILWIND AÑADIR AQUÍ (CTA wrapper):
+                   - flex
+                   - gap
+                   - wrap en móvil si hace falta
+              -->
+              <div class="cta flex gap-5">
+                <!-- TAILWIND AÑADIR AQUÍ (Botón primario):
+                     - padding
+                     - rounded
+                     - background claro/contraste
+                     - texto
+                     - transición (transition, duration)
+                   EFECTO:
+                     - hover compuesto: translateY + shadow
+                -->
+                <a
+                  href="#proyectos"
+                  class="btn btn-primary p-4 bg-cyan-500 rounded-lg text-black font-bold"
+                  >Ver proyectos</a
+                >
+
+                <!-- TAILWIND AÑADIR AQUÍ (Botón secundario):
+                     - borde
+                     - bg transparente
+                     - transición
+                   EFECTO:
+                     - hover distinto (opacity/scale/border)
+                -->
+                <a
+                  href="#contacto"
+                  class="btn btn-secondary p-4 bg-black/35 rounded-lg text-white font-bold border-1 border-white"
+                  >Contactar</a
+                >
+              </div>
+            </div>
+
+            <!-- Tarjeta de preview -->
+            <!-- TAILWIND AÑADIR AQUÍ (Card hero):
+                 - rounded-2xl
+                 - border sutil
+                 - bg semitransparente
+                 - padding
+                 - (opcional) shadow suave
+            -->
+            <aside
+              class="hero-card border-solid rounded-2xl border-1 border-gray-700 p-5 bg-black/25 shadow-lg shadow-cyan-950"
+            >
+              <!-- TAILWIND AÑADIR AQUÍ (Top card):
+                   - flex items-center justify-between
+                   - texto pequeño y color suave
+              -->
+              <div class="hero-card-top flex items-center justify-between">
+                <p>Preview</p>
+
+                <!-- TAILWIND AÑADIR AQUÍ (Mini badge):
+                     - rounded-full
+                     - bg tenue
+                     - text-xs
+                     - padding
+                -->
+                <span
+                  class="mini-badge rounded-full bg-white/10 pt-1 pb-1 pr-3 pl-3"
+                  >UI</span
+                >
+              </div>
+
+              <!-- Skeleton -->
+              <!-- TAILWIND AÑADIR AQUÍ (Bloque skeleton):
+                   - margin-top
+                   - space-y
+              -->
+              <div class="skeleton mt-7 space-y-5">
+                <!-- TAILWIND AÑADIR AQUÍ (Barras):
+                     - height pequeña
+                     - bg tenue
+                     - rounded-full
+                     - widths distintas (w-3/4, w-2/3, etc.)
+                -->
+                <div class="bar bar-1 h-5 bg-white/10 w-3/4 rounded-full"></div>
+                <div class="bar bar-2 h-5 bg-white/10 w-2/3 rounded-full"></div>
+                <div class="bar bar-3 h-5 bg-white/10 w-1/2 rounded-full"></div>
+              </div>
+
+              <!-- Tip -->
+              <!-- TAILWIND AÑADIR AQUÍ (Mini card tip):
+                   - margin-top
+                   - rounded
+                   - border sutil
+                   - bg tenue
+                   - padding
+              -->
+              <div
+                class="tip mt-10 p-5 bg-white/5 border-1 border-white/15 rounded-md"
+              >
+                <p>Tip</p>
+                <p>
+                  Prioriza animar <code class="bg-white/10 p-1">opacity</code> y
+                  <code class="bg-white/10 p-1">transform</code>.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           PROYECTOS
+           ========================= -->
+
+      <!-- TAILWIND AÑADIR AQUÍ (Section proyectos):
+           - padding vertical
+      -->
+      <section id="proyectos" class="projects pt-24">
+        <!-- TAILWIND AÑADIR AQUÍ (Contenedor):
+             - mx-auto + max-w + px
+        -->
+        <div class="container mx-auto max-w-fit pr-10 pl-10 md:pr-52 md:pl-52">
+          <!-- TAILWIND AÑADIR AQUÍ (Header sección):
+               - margin-bottom
+               - (opcional) flex para alinear título y hint
+          -->
+          <div class="section-head mb-10">
+            <!-- TAILWIND AÑADIR AQUÍ (H2):
+                   - text-2xl
+                   - font-semibold
+                   - tracking-tight
+              -->
+            <h2 class="section-title text-2xl font-semibold tracking-tight">
+              Proyectos
+            </h2>
+
+            <div class="flex flex-row justify-between">
+              <!-- TAILWIND AÑADIR AQUÍ (Hint):
+                 - text-xs
+                 - color suave
+              -->
+              <span class="hint text-sm text-gray-300"
+                >Responsive: 2 cols móvil / 3 escritorio</span
+              >
+
+              <!-- TAILWIND AÑADIR AQUÍ (P):
+                   - text-sm
+                   - color suave
+              -->
+              <p class="section-subtitle text-sm text-gray-300">
+                6 cards con overlay + reveal (obligatorio).
+              </p>
+            </div>
+          </div>
+
+          <!-- TAILWIND AÑADIR AQUÍ (Grid proyectos):
+               - grid
+               - sm:grid-cols-2
+               - lg:grid-cols-3
+               - gap
+          -->
+          <div
+            class="projects-grid grid grid-cols-[repeat(2,minmax(200px,1fr))] lg:grid-cols-3 gap-5"
+          >
+            <!-- CARD (x6) -->
+            <!-- TAILWIND AÑADIR AQUÍ (Card):
+                 - rounded-2xl
+                 - overflow-hidden
+                 - border sutil
+                 - bg tenue
+                 - transición (para hover compuesto)
+               EFECTO:
+                 - hover: elevación + sombra
+            -->
+            <article
+              class="project-card group relative h-72 rounded-2xl overflow-hidden border-1 border-white hover:scale-105 transition hover:shadow-lg hover:shadow-white/50"
+            >
+              <!-- TAILWIND AÑADIR AQUÍ (Imagen):
+                   - w-full
+                   - altura fija (h-...)
+                   - object-cover
+                   - (opcional) transición para zoom al hover
+              -->
+              <img
+                class="project-img w-full object-cover h-72"
+                src="https://picsum.photos/600/400?random=31"
+                alt="Nebula"
+                loading="lazy"
+              />
+
+              <!-- Overlay -->
+              <!-- TAILWIND AÑADIR AQUÍ (Overlay):
+                   - position absolute + inset-0
+                   - fondo oscuro semitransparente
+                   - empezar oculto (opacity-0)
+                   - aparecer al hover (group-hover:opacity-100)
+                   - transición
+              -->
+              <div
+                class="project-overlay absolute inset-0 bg-yellow-200/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <!-- TAILWIND AÑADIR AQUÍ (Caja texto dentro del overlay):
+                     - alineación (por ejemplo bottom con flex)
+                     - caja con bg tenue + border + rounded
+                     - reveal: translate + opacity en hover (group-hover)
+                     - transición
+                -->
+                <div
+                  class="project-overlay-inner absolute inset-0 flex translate-y-4 flex-col justify-end p-6 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p class="project-tag text-cyan-500 font-bold">Branding</p>
+                  <h3 class="project-title text-white font-bold">Nebula</h3>
+                  <p class="project-desc text-gray-400">
+                    Overlay al hover + reveal
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Repite 5 cards más -->
+            <article
+              class="project-card group relative h-72 rounded-2xl overflow-hidden border-1 border-white hover:scale-105 transition hover:shadow-lg hover:shadow-white/50"
+            >
+              <img
+                class="project-img w-full object-cover h-72"
+                src="https://picsum.photos/600/400?random=32"
+                alt="Pulse"
+                loading="lazy"
+              />
+              <div
+                class="project-overlay absolute inset-0 bg-yellow-200/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="project-overlay-inner absolute inset-0 flex translate-y-4 flex-col justify-end p-6 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p class="project-tag text-cyan-500 font-bold">UI</p>
+                  <h3 class="project-title text-white font-bold">Pulse</h3>
+                  <p class="project-desc text-gray-400">Transiciones suaves</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card group relative h-72 rounded-2xl overflow-hidden border-1 border-white hover:scale-105 transition hover:shadow-lg hover:shadow-white/50"
+            >
+              <img
+                class="project-img w-full object-cover h-72"
+                src="https://picsum.photos/600/400?random=33"
+                alt="Astra"
+                loading="lazy"
+              />
+              <div
+                class="project-overlay absolute inset-0 bg-yellow-200/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="project-overlay-inner absolute inset-0 flex translate-y-4 flex-col justify-end p-6 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p class="project-tag text-cyan-500 font-bold">Web</p>
+                  <h3 class="project-title text-white font-bold">Astra</h3>
+                  <p class="project-desc text-gray-400">Reveal desde abajo</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card group relative h-72 rounded-2xl overflow-hidden border-1 border-white hover:scale-105 transition hover:shadow-lg hover:shadow-white/50"
+            >
+              <img
+                class="project-img w-full object-cover h-72"
+                src="https://picsum.photos/600/400?random=34"
+                alt="Mono"
+                loading="lazy"
+              />
+              <div
+                class="project-overlay absolute inset-0 bg-yellow-200/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="project-overlay-inner absolute inset-0 flex translate-y-4 flex-col justify-end p-6 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p class="project-tag text-cyan-500 font-bold">Ecommerce</p>
+                  <h3 class="project-title text-white font-bold">Mono</h3>
+                  <p class="project-desc text-gray-400">Hover premium</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card group relative h-72 rounded-2xl overfloaw-hidden border-1 border-white hover:scale-105 transition hover:shadow-lg hover:shadow-white/50"
+            >
+              <img
+                class="project-img w-full object-cover h-72"
+                src="https://picsum.photos/600/400?random=35"
+                alt="Glow"
+                loading="lazy"
+              />
+              <div
+                class="project-overlay absolute inset-0 bg-yellow-200/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="project-overlay-inner absolute inset-0 flex translate-y-4 flex-col justify-end p-6 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p class="project-tag text-cyan-500 font-bold">Landing</p>
+                  <h3 class="project-title text-white font-bold">Glow</h3>
+                  <p class="project-desc text-gray-400">Overlay 2 capas</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card group relative h-72 rounded-2xl overflow-hidden border-1 border-white hover:scale-105 transition hover:shadow-lg hover:shadow-white/50"
+            >
+              <img
+                class="project-img w-full object-cover h-72"
+                src="https://picsum.photos/600/400?random=36"
+                alt="Orbit"
+                loading="lazy"
+              />
+              <div
+                class="project-overlay absolute inset-0 bg-yellow-200/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="project-overlay-inner absolute inset-0 flex translate-y-4 flex-col justify-end p-6 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p class="project-tag text-cyan-500 font-bold">App</p>
+                  <h3 class="project-title text-white font-bold">Orbit</h3>
+                  <p class="project-desc text-gray-400">Animación suave</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- EXTRA: stagger (opcional) -->
+        </div>
+      </section>
+
+      <!-- =========================
+           SERVICIOS
+           ========================= -->
+
+      <!-- TAILWIND AÑADIR AQUÍ (Section servicios): padding vertical -->
+      <section
+        id="servicios"
+        class="services mt-24 pr-10 pl-10 md:pr-52 md:pl-52"
+      >
+        <div class="container">
+          <!-- TAILWIND AÑADIR AQUÍ (Títulos sección) -->
+          <h2 class="section-title text-3xl font-bold">Servicios</h2>
+          <p class="section-subtitle text-lg text-gray-400">
+            Glassmorphism + hover.
+          </p>
+
+          <!-- TAILWIND AÑADIR AQUÍ (Grid servicios):
+               - grid
+               - md:grid-cols-3
+               - gap
+          -->
+          <div
+            class="services-grid grid grid-cols-1 lg:grid-cols-3 gap-5 justify-center align-middle mt-5"
+          >
+            <!-- TAILWIND AÑADIR AQUÍ (Card servicio):
+                 - rounded
+                 - border sutil
+                 - bg semitransparente
+                 - backdrop-blur (glassmorphism)
+                 - hover: elevación + cambio leve
+            -->
+            <article
+              class="service-card bg-white/5 rounded-md border-1 border-white/10 p-5"
+            >
+              <h3 class="text-2xl text-white font-bold">UI Design</h3>
+              <p class="text-lg text-gray-400">
+                Componentes limpios, consistentes y reutilizables.
+              </p>
+            </article>
+
+            <article
+              class="service-card bg-white/5 rounded-md border-1 border-white/10 p-5"
+            >
+              <h3 class="text-2xl text-white font-bold">Maquetación Pro</h3>
+              <p class="text-lg text-gray-400">
+                Grid, spacing, tipografía y microinteracciones.
+              </p>
+            </article>
+
+            <article
+              class="service-card bg-white/5 rounded-md border-1 border-white/10 p-5"
+            >
+              <h3 class="text-2xl text-white font-bold">Efectos Visuales</h3>
+              <p class="text-lg text-gray-400">
+                Overlays, transiciones suaves y animaciones finas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           CONTACTO
+           ========================= -->
+
+      <!-- TAILWIND AÑADIR AQUÍ (Section contacto): padding vertical -->
+      <section
+        id="contacto"
+        class="contact bg-sky-950/20 mt-24 pt-24 pr-10 pl-10 md:pr-52 md:pl-52 pb-24"
+      >
+        <div class="container">
+          <!-- TAILWIND AÑADIR AQUÍ (Títulos sección) -->
+          <h2 class="section-title text-white text-3xl font-bold">Contacto</h2>
+          <p class="section-subtitle text-gray-400 text-lg">
+            Focus accesible + focus-within obligatorio.
+          </p>
+
+          <!-- TAILWIND AÑADIR AQUÍ (Form):
+               - max-w
+               - spacing (space-y)
+               - margin-top
+          -->
+          <form class="form space-y-5 text-center mt-14">
+            <!-- TAILWIND AÑADIR AQUÍ (Field wrapper):
+                 - border, rounded, padding
+                 - focus-within (ring/borde/fondo)
+            -->
+            <div
+              class="field center border-1 border-white/10 rounded-md p-5 max-w-md mx-auto flex flex-col items-start gap-2"
+            >
+              <label for="email" class="font-bold text-white text-xl"
+                >Email</label
+              >
+              <!-- TAILWIND AÑADIR AQUÍ (Input):
+                   - w-full
+                   - bg transparente o tenue
+                   - border/rounded/padding
+                   - focus visible (ring/borde)
+              -->
+              <input
+                class="input"
+                id="email"
+                type="email"
+                placeholder="tuemail@ejemplo.com"
+                required
+              />
+            </div>
+
+            <div
+              class="field field center border-1 border-white/10 rounded-md p-5 max-w-md mx-auto flex flex-col items-start gap-2"
+            >
+              <label for="msg" class="font-bold text-white text-xl"
+                >Mensaje</label
+              >
+              <textarea
+                class="input"
+                id="msg"
+                rows="5"
+                placeholder="Cuéntame qué necesitas…"
+                required
+              ></textarea>
+            </div>
+
+            <!-- TAILWIND AÑADIR AQUÍ (Submit):
+                 - mismo estilo que btn-primary (o parecido)
+                 - hover compuesto
+            -->
+            <button
+              class="btn btn-primary bg-white/80 hover:bg-white transition hover:scale-105 text-black p-5 rounded-lg min-w-112 tracking-widest text-2xl shadow-lg hover:shadow-white/50 border-3 border-gray-700"
+              type="submit"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         MODAL PROYECTOS (reutilizado para las 6 cards)
+         ===================================================== -->
+    <div
+      id="overlay"
+      class="fixed inset-0 hidden bg-black/60 flex items-center justify-center z-50"
+    >
+      <div
+        id="modal"
+        class="bg-gray-900 rounded-2xl p-6 w-11/12 max-w-lg transform transition duration-300 opacity-0 scale-95 border border-white/10 shadow-2xl shadow-cyan-900/60"
+      >
+        <div class="flex justify-between items-start gap-4 mb-4">
+          <div>
+            <p
+              id="modalTag"
+              class="text-sm font-semibold text-cyan-400 uppercase tracking-wide"
+            >
+              Tag
+            </p>
+            <h2
+              id="modalTitle"
+              class="text-2xl font-bold text-white mt-1 tracking-tight"
+            >
+              Título del proyecto
+            </h2>
+          </div>
+
+          <button
+            id="closeModal"
+            class="ml-4 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-xs font-semibold text-gray-200 border border-white/20 transition"
+          >
+            Cerrar
+          </button>
+        </div>
+
+        <div class="space-y-4">
+          <div class="overflow-hidden rounded-xl border border-white/10">
+            <img
+              id="modalImg"
+              src="https://picsum.photos/600/400"
+              alt="Proyecto"
+              class="w-full h-52 object-cover"
+            />
+          </div>
+
+          <p id="modalDesc" class="text-sm text-gray-300">
+            Descripción del proyecto seleccionada desde la tarjeta.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <!-- TAILWIND AÑADIR AQUÍ (Footer):
+         - borde superior sutil
+         - padding vertical
+         - texto pequeño y color tenue
+    -->
+    <footer
+      class="footer border-1 border-white/15 min-h-fit pt-5 pb-5 text-center text-4xl font-bold"
+    >
+      <div class="container mx-auto">© 2026 Studio.neo</div>
+    </footer>
+    <script src="modal.js"></script>
+  </body>
+</html>
