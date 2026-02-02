@@ -1,0 +1,57 @@
+CONTENEDOR ESTANDAR
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+################################################################
+
+boton {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.boton:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+################################################################
+
+<style>
+@keyframes entrada {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.anim-entrada { 
+  animation: entrada 600ms ease-out both; 
+}
+</style>
+
+<section class="anim-entrada rounded-2xl border p-6">
+Aparezco al cargar
+</section>
+
+################################################################
+
+<style>
+@keyframes subir {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.anim-subir { 
+  animation: subir 500ms ease-out both; 
+}
+</style>
+
+<div class="grid md:grid-cols-3 gap-6">
+  <div class="anim-subir border rounded-2xl p-6" style="animation-delay:0ms">Uno</div>
+  <div class="anim-subir border rounded-2xl p-6" style="animation-delay:150ms">Dos</div>
+  <div class="anim-subir border rounded-2xl p-6" style="animation-delay:300ms">Tres</div>
+</div>
