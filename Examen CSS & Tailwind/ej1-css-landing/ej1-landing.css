@@ -1,0 +1,149 @@
+/* Base general: configura la tipografía y la claridad del texto en toda la página. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  background-color: gainsboro;
+}
+
+/* Zona principal:
+   - Haz que el contenido principal no ocupe toda la anchura de la pantalla.
+   - Deja márgenes laterales y un poco de espacio superior e inferior.
+   - La zona de contenido debe quedar centrada horizontalmente. */
+.site-main {
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+}
+
+/* Encabezado:
+   - Debe verse como una barra horizontal en la parte superior.
+   - El logo debe quedar a la izquierda y el menú a la derecha.
+   - Añade espacio interior para que no quede pegado al borde de la ventana. */
+.site-header {
+}
+
+.header-inner {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Menú de navegación:
+   - Muestra los elementos de la lista en una sola línea.
+   - Deja separación horizontal entre cada elemento del menú.
+   - Asegúrate de que los enlaces sean fáciles de leer y pulsar. */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav li {
+  /* El color no se aplica por que son etiquetas a */
+  /* color: black; */
+  font-size: 20px;
+}
+
+.main-nav a {
+  color: black;
+}
+
+.main-nav a {
+  text-decoration: none;
+}
+
+/* Sección hero:
+   - Debe ocupar una zona amplia y llamativa.
+   - El contenido debe estar centrado horizontalmente.
+   - Controla el ancho del bloque de texto para que no sea demasiado largo. */
+.hero {
+  margin-bottom: 50px;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+/* Botón principal:
+   - Debe parecer claramente un botón de llamada a la acción.
+   - Añade espacio interior, bordes suavizados y un color que lo distinga del fondo.
+   - Deja separación respecto al texto anterior. */
+.btn-cta {
+  align-self: center;
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+/* Sección de características:
+   - Esta sección contiene tres tarjetas.
+   - En pantallas grandes, las tarjetas deben verse en varias columnas en la misma fila.
+   - En pantallas pequeñas, las tarjetas deben aparecer una debajo de otra. */
+.features {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.features-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta individual:
+   - Cada tarjeta debe tener un fondo diferenciado del fondo general.
+   - Añade relleno interior para separar el texto de los bordes.
+   - Deja espacio entre las tarjetas para que no parezcan pegadas. */
+.feature-card {
+  background-color: white;
+  padding: 15px;
+  border: hidden;
+  border-radius: 15px;
+}
+
+/* Pie de página:
+   - El texto debe aparecer centrado.
+   - Separa visualmente el pie del resto del contenido (por ejemplo, con un espacio superior
+     o mediante una línea o fondo diferente). */
+.site-footer {
+  background-color: white;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .site-main {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .features-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

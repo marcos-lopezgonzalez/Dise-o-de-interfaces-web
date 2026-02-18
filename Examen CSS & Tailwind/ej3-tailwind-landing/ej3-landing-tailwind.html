@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Examen DIW - Ejercicio 3 Tailwind (Landing)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- IMPORTANTE:
+       Sustituye o reemplaza este archivo tailwind.css por el que utilizas en clase.
+       Si este archivo está vacío, las clases de Tailwind no tendrán efecto. -->
+    <!-- <link rel="stylesheet" href="./../../tailwind.js"> -->
+    <script src="tailwind.js"></script>
+  </head>
+  <body class="bg-slate-200">
+    <header class="h-20 bg-white p-5">
+      <!-- En clase no me va el items center, comprueba si te va a ti profesor -->
+      <div class="flex justify-around items-center">
+        <!-- Encabezado:
+           - Coloca el logo a la izquierda y el menú a la derecha.
+           - Asegúrate de que todo quede en una única barra horizontal.
+           - Deja espacio interior arriba y abajo para que no quede pegado al borde. -->
+        <div>
+          <span class="text-2xl font-bold">Taskly</span>
+        </div>
+        <nav>
+          <ul class="flex flex-row gap-10 text-xl">
+            <!-- Menú:
+               - Muestra los enlaces en una sola fila.
+               - Deja separación horizontal entre los elementos.
+               - Asegúrate de que el texto sea legible. -->
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Precios</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+      <section class="mr-10 ml-10 md:mr-0 md:ml-0">
+        <div class="flex flex-col justify-center items-center">
+          <!-- Sección hero:
+             - Centra el contenido respecto al ancho de la página.
+             - Limita el ancho máximo del bloque de texto para que no se extienda demasiado.
+             - Haz que el título se vea más grande y llamativo que el resto del texto. -->
+          <h1 class="font-bold text-4xl mt-10">Organiza tus tareas diarias</h1>
+          <p class="text-slate-500 mt-5">
+            Crea listas, marca tareas completadas y mantén tus proyectos bajo
+            control desde cualquier dispositivo.
+          </p>
+          <!-- Botón principal:
+             - Haz que este enlace parezca un botón de acción (fondo, relleno, bordes redondeados).
+             - Debe destacar sobre el resto del contenido. -->
+          <a class="bg-blue-500 text-white mt-5 p-3 rounded-2xl" href="#"
+            >Empezar ahora</a
+          >
+        </div>
+      </section>
+
+      <section class="mr-10 ml-10 md:mr-0 md:ml-0">
+        <div
+          class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-10 mt-15"
+        >
+          <!-- Tarjetas de características:
+             - Organiza las tres tarjetas en varias columnas en pantallas grandes.
+             - En pantallas pequeñas deben aparecer una debajo de otra.
+             - Deja separación horizontal y vertical entre las tarjetas. -->
+
+          <article class="bg-white p-10 rounded-xl">
+            <!-- Cada tarjeta:
+               - Debe tener un fondo diferenciado.
+               - Añade espacio interior para que el texto no esté pegado a los bordes.
+               - Separa el título del párrafo con un pequeño espacio. -->
+            <h2 class="font-bold text-xl">Listas rápidas</h2>
+            <p class="">
+              Crea nuevas listas en segundos y añade tareas sin complicaciones.
+            </p>
+          </article>
+
+          <article class="bg-white p-10 rounded-xl">
+            <h2 class="font-bold text-xl">Recordatorios</h2>
+            <p>
+              Recibe avisos para que no se te pase ninguna tarea importante.
+            </p>
+          </article>
+
+          <article class="bg-white p-10 rounded-xl">
+            <h2 class="font-bold text-xl">Multidispositivo</h2>
+            <p>Accede a tus tareas desde el móvil, la tablet o el ordenador.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white flex justify-center mt-15 p-5">
+      <!-- Pie de página:
+         - Centra el texto.
+         - Deja una separación clara respecto al contenido anterior.
+         - Puedes diferenciar esta zona con un borde o un fondo distinto. -->
+      <p>Taskly · Examen DIW · Curso 2024/2025</p>
+    </footer>
+  </body>
+</html>

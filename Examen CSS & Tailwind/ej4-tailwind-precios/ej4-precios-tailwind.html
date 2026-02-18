@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Examen DIW - Ejercicio 4 Tailwind (Precios con imágenes)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- IMPORTANTE:
+       Sustituye o reemplaza este archivo tailwind.css por el que utilizas en clase.
+       Si este archivo está vacío, las clases de Tailwind no tendrán efecto. -->
+    <!-- <link rel="stylesheet" href="./tailwind.js"> -->
+    <script src="tailwind.js"></script>
+  </head>
+  <body class="bg-slate-300">
+    <main class="max-w-6xl mx-auto">
+      <section class="">
+        <div class="text-center mt-10">
+          <!-- Cabecera de la sección:
+             - Centra el título y el texto.
+             - Deja espacio vertical arriba y abajo para que no quede pegado. -->
+          <h1 class="font-bold text-4xl mb-5">Elige tu plan</h1>
+          <p class="text-gray-500 text-xl">
+            Selecciona el plan que mejor se adapte a tus necesidades. Podrás
+            cambiarlo en cualquier momento.
+          </p>
+        </div>
+
+        <div
+          class="mt-10 grid grid-cols-1 ml-10 mr-10 md:mr-0 md:ml-0 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-10"
+        >
+          <!-- Contenedor de tarjetas:
+             - En pantallas grandes, organiza las tres tarjetas en varias columnas.
+             - En pantallas pequeñas, las tarjetas deben aparecer una debajo de otra.
+             - Deja espacio uniforme entre las tarjetas tanto horizontal como vertical. -->
+
+          <article
+            class="bg-white flex flex-col gap-5 rounded-xl shadow-md shadow-gray-400"
+          >
+            <div>
+              <!-- Imagen del plan Básico:
+                 - Colócala en la parte superior de la tarjeta.
+                 - Haz que ocupe el ancho disponible sin deformarse.
+                 - Asegúrate de que no se sale del contenedor. -->
+              <img
+                class="rounded-t-xl"
+                src="img/plan-basico.jpeg"
+                alt="Ilustración del plan básico"
+              />
+            </div>
+            <!-- Contenido de la tarjeta:
+               - Mantén un orden claro: imagen, título, precio, lista, botón. -->
+            <h2 class="pl-5 font-bold text-xl">Básico</h2>
+            <!-- El precio debe destacar más que el resto de texto de la tarjeta. -->
+            <p class="pl-5 text-blue-700 font-bold text-xl">5 €/mes</p>
+            <ul class="pl-5 text-slate-500 font-bold">
+              <li>Listas ilimitadas</li>
+              <li>Recordatorios básicos</li>
+              <li>Acceso desde 1 dispositivo</li>
+            </ul>
+            <!-- Este enlace debe tener formato de botón de acción. -->
+            <a
+              class="self-center p-2 mb-5 rounded-xl text-white bg-blue-600 w-50 text-center"
+              href="#"
+              >Elegir plan</a
+            >
+          </article>
+
+          <article
+            class="bg-white flex flex-col gap-5 rounded-2xl border-3 border-blue-300 shadow-md shadow-gray-400"
+          >
+            <div>
+              <!-- Imagen del plan Pro:
+                 - Debe seguir el mismo estilo que la imagen del plan Básico.
+                 - Mantén el mismo tamaño y proporciones para que las tarjetas se vean coherentes. -->
+              <img
+                class="rounded-t-xl"
+                src="img/plan-pro.jpeg"
+                alt="Ilustración del plan Pro"
+              />
+            </div>
+            <!-- Esta tarjeta debe destacar visualmente frente a las demás
+               para que parezca la opción recomendada. -->
+            <h2 class="pl-5 font-bold text-xl">Pro</h2>
+            <p class="pl-5 text-blue-700 font-bold text-xl">12 €/mes</p>
+            <ul class="pl-5 text-slate-500 font-bold">
+              <li>Listas ilimitadas</li>
+              <li>Recordatorios avanzados</li>
+              <li>Sin anuncios</li>
+              <li>Acceso desde 3 dispositivos</li>
+            </ul>
+            <a
+              class="self-center p-2 mb-5 rounded-xl text-white bg-blue-600 w-50 text-center"
+              href="#"
+              >Elegir plan</a
+            >
+          </article>
+
+          <article
+            class="bg-white flex flex-col gap-5 rounded-xl shadow-md shadow-gray-400"
+          >
+            <div>
+              <!-- Imagen del plan Premium:
+                 - Usa el mismo estilo que en las otras dos imágenes.
+                 - Todas las tarjetas deben verse como parte de la misma familia de diseño. -->
+              <img
+                class="rounded-t-xl"
+                src="img/plan-premium.jpeg"
+                alt="Ilustración del plan Premium"
+              />
+            </div>
+            <h2 class="pl-5 font-bold text-xl">Premium</h2>
+            <p class="pl-5 text-blue-700 font-bold text-xl">20 €/mes</p>
+            <ul class="pl-5 text-slate-500 font-bold">
+              <li>Todo lo del plan Pro</li>
+              <li>Soporte prioritario</li>
+              <li>Trabajo en equipo</li>
+            </ul>
+            <a
+              class="self-center p-2 mb-5 rounded-xl text-white bg-blue-600 w-50 text-center"
+              href="#"
+              >Elegir plan</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

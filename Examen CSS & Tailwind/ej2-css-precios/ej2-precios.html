@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Examen DIW - Ejercicio 2 CSS (Precios con imágenes)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ej2-precios.css" />
+  </head>
+  <body>
+    <main class="pricing-page">
+      <section class="pricing">
+        <div class="pricing-header">
+          <h1>Elige tu plan</h1>
+          <p class="pricing-intro">
+            Selecciona el plan que mejor se adapte a tus necesidades. Podrás
+            cambiarlo en cualquier momento.
+          </p>
+        </div>
+
+        <div class="plans">
+          <article class="plan plan-basic">
+            <div class="plan-image-wrapper">
+              <img
+                src="img/plan-basico.jpeg"
+                alt="Ilustración del plan básico"
+                class="plan-image"
+              />
+            </div>
+            <div class="plan-info">
+              <h2>Básico</h2>
+              <p class="plan-price">5 €/mes</p>
+              <ul class="plan-features">
+                <li>Listas ilimitadas</li>
+                <li>Recordatorios básicos</li>
+                <li>Acceso desde 1 dispositivo</li>
+              </ul>
+              <a href="#" class="plan-button">Elegir plan</a>
+            </div>
+          </article>
+
+          <article class="plan plan-pro">
+            <div class="plan-image-wrapper">
+              <img
+                src="img/plan-pro.jpeg"
+                alt="Ilustración del plan Pro"
+                class="plan-image"
+              />
+            </div>
+            <div class="plan-info">
+              <h2>Pro</h2>
+              <p class="plan-price">12 €/mes</p>
+              <ul class="plan-features">
+                <li>Listas ilimitadas</li>
+                <li>Recordatorios avanzados</li>
+                <li>Sin anuncios</li>
+                <li>Acceso desde 3 dispositivos</li>
+              </ul>
+              <a href="#" class="plan-button">Elegir plan</a>
+            </div>
+          </article>
+
+          <article class="plan plan-premium">
+            <div class="plan-image-wrapper">
+              <img
+                src="img/plan-premium.jpeg"
+                alt="Ilustración del plan Premium"
+                class="plan-image"
+              />
+            </div>
+            <div class="plan-info">
+              <h2>Premium</h2>
+              <p class="plan-price">20 €/mes</p>
+              <ul class="plan-features">
+                <li>Todo lo del plan Pro</li>
+                <li>Soporte prioritario</li>
+                <li>Trabajo en equipo</li>
+              </ul>
+            </div>
+            <a href="#" class="plan-button">Elegir plan</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,424 @@
+/* =====================================================
+   BASE COMÚN (NO SE MODIFICA)
+   ===================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f1f5f9;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.1);
+
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+
+  --shadow-sm: 0 8px 16px rgba(2, 6, 23, 0.06);
+  --shadow-md: 0 18px 40px rgba(2, 6, 23, 0.16);
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* .container {
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;
+} */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =====================================================
+   HEADER (FLEX) — A COMPLETAR
+   ===================================================== */
+
+/*
+  OBJETIVO:
+  - colocar marca, menú y botón en una fila
+  - alinear verticalmente
+  - separar los elementos
+*/
+
+.header {
+  position: sticky;
+  top: 0px;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header__inner {
+  /* A COMPLETAR */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.brand {
+  /* A COMPLETAR */
+  display: flex;
+  align-items: start;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.brand__logo {
+  background-color: blue;
+  padding: 5px;
+  max-width: fit-content;
+  min-width: fit-content;
+  border-radius: 25%;
+  color: white;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand__kicker {
+  margin-top: -7px;
+  font-size: medium;
+}
+
+.brand__title {
+  margin-top: -20px;
+  font-size: medium;
+}
+
+.nav {
+  /* A COMPLETAR */
+  display: flex;
+  gap: 30px;
+}
+
+/* =====================================================
+   MENÚ — SUBRAYADO CON TRANSICIÓN
+   ===================================================== */
+
+.nav__link {
+  font-weight: bold;
+  position: relative;
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #334155;
+  text-decoration: none;
+}
+
+/*
+  OBJETIVO:
+  - crear una línea decorativa bajo el enlace
+  - no visible inicialmente
+  - aparece al pasar el ratón
+  - el cambio debe ser suave
+*/
+.nav__link::after {
+  content: "";
+  /* A COMPLETAR */
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: blue;
+  transition: width 0.25s ease;
+}
+
+.nav__link:hover {
+  /* A COMPLETAR */
+  color: blue;
+}
+
+.nav__link:hover::after {
+  /* A COMPLETAR */
+  width: 100%;
+}
+
+/* =====================================================
+   BOTONES — TRANSICIÓN BÁSICA
+   ===================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  border: 1px solid transparent;
+
+  /* Transición simple */
+  transition: 0.25s;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+/*
+  OBJETIVO:
+  - al pasar el ratón:
+    · el botón se mueve ligeramente hacia arriba
+*/
+.btn--primary:hover {
+  /* A COMPLETAR */
+  transform: scale(110%);
+  transform: translateY(-00.25rem);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: rgba(15, 23, 42, 0.18);
+  color: var(--text);
+}
+
+.btn--ghost:hover {
+  /* A COMPLETAR */
+  border-color: blue;
+  transition: 300ms;
+  box-shadow: var(--shadow-md);
+}
+
+/*
+  OBJETIVO:
+  - el foco con teclado debe verse claramente
+*/
+.btn:focus,
+.nav__link:focus {
+  /* A COMPLETAR */
+  border-color: blue;
+  transition: 300ms;
+}
+
+/* =====================================================
+   GRID DE TARJETAS — A COMPLETAR
+   ===================================================== */
+
+/*
+  OBJETIVO:
+  - 1 columna en móvil
+  - 2 columnas a partir de 640px
+  - 3 columnas a partir de 1024px
+*/
+.cards {
+  /* A COMPLETAR */
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+/*Tarjetas responsive*/
+@media (min-width: 640px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/*Tarjetas responsive*/
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+/* =====================================================
+   TARJETAS — HOVER + OVERLAY
+   ===================================================== */
+
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  border-color: black;
+
+  transition: 0.25s;
+}
+
+.card__media_1 {
+  min-height: 200px;
+  background-color: blue;
+}
+
+.card__media_2 {
+  min-height: 200px;
+  background-color: greenyellow;
+}
+
+.card__media_3 {
+  min-height: 200px;
+  background-color: pink;
+}
+
+.card__media_4 {
+  min-height: 200px;
+  background-color: orange;
+}
+
+.card__media_5 {
+  min-height: 200px;
+  background-color: cyan;
+}
+
+.card__media_6 {
+  min-height: 200px;
+  background-color: gray;
+}
+
+.card__body {
+  padding: 1.25rem;
+}
+
+.card__tag_1 {
+  font-weight: bold;
+  color: blue;
+}
+
+.card__tag_2 {
+  font-weight: bold;
+  color: greenyellow;
+}
+
+.card__tag_3 {
+  font-weight: bold;
+  color: pink;
+}
+
+.card__tag_4 {
+  font-weight: bold;
+  color: orange;
+}
+
+.card__tag_5 {
+  font-weight: bold;
+  color: cyan;
+}
+
+.card__tag_6 {
+  font-weight: bold;
+  color: gray;
+}
+
+.card__text {
+  color: gray;
+}
+
+.badge {
+  font-weight: bold;
+}
+
+/*
+  OBJETIVO:
+  - al pasar el ratón:
+    · la tarjeta se eleva ligeramente
+*/
+.card:hover {
+  /* A COMPLETAR */
+  transform: translateY(-00.25rem);
+  box-shadow: var(--shadow-md);
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(15, 23, 42, 0.55);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.25s;
+}
+
+/*
+  OBJETIVO:
+  - el overlay aparece al pasar el ratón por la tarjeta
+  - usando opacidad
+*/
+.card:hover .card__overlay {
+  /* A COMPLETAR */
+  opacity: 1;
+}
+
+/*
+  OBJETIVO:
+  - alinear badge y botón en una fila
+*/
+.card__footer {
+  /* A COMPLETAR */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =====================================================
+   FOOTER (FLEX) — A COMPLETAR
+   ===================================================== */
+
+.footer {
+  margin-top: 50px;
+  min-height: fit-content;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: black;
+  color: white;
+}
+
+.footer__inner {
+  /* A COMPLETAR */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer__title {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.footer__text {
+  color: rgb(197, 197, 197);
+}
+
+.footer__list {
+  color: rgb(197, 197, 197);
+}
